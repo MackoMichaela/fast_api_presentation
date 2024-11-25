@@ -19,3 +19,6 @@ Recommended to use Postman for request sending.
 
 If using curl to send requests:
 - curl "http://127.0.0.1:8000/calculator/add?a=10&b=5"
+
+For http stutus list, refer to for example this link: 
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses

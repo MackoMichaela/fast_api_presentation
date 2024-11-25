@@ -6,9 +6,14 @@ app = FastAPI()
 
 app.include_router(calculator.router, prefix="/calculator", tags=["Calculator"])
 
-# Add router here based on the calculator router above
+# Exercise 3 #
+# Add converter router here based on the calculator router above
 # Remember to define prefix param!
+
+# solution 3:
 app.include_router(converter.router, prefix="/converter", tags=["Metric Converter"])
+
+###
 
 
 @app.get("/")

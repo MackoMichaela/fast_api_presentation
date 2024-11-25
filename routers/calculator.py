@@ -22,10 +22,15 @@ def multiply(a: float, b: float) -> dict:
     return {"result": a * b}
 
 
+# Exercise 1 ###
+
 # Implement the /divide endpoint here based on the above functions
-# Remember, no division by zero.
-# Tip: add an if that returns an HTTPException with the
-# correct status code when the number you divide with is zero
+# Remember, no division by zero. What should be the condition?
+# Tip: add an exception handling condition: an 'if' that returns an HTTPException with the
+# correct status code when the number you divide with is zero.
+
+# solution 1:
+
 
 @router.get("/divide")
 def divide(a: float, b: float) -> dict:
@@ -33,3 +38,6 @@ def divide(a: float, b: float) -> dict:
     if b == 0:
         raise HTTPException(status_code=400, detail="Division by zero is not allowed")
     return {"result": a / b}
+
+
+###
